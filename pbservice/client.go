@@ -10,7 +10,7 @@ import "math/big"
 
 type Clerk struct {
 	vs *viewservice.Clerk
-	// Your declarations here
+	// TODO: Your declarations here
 }
 
 // this may come in handy.
@@ -24,7 +24,7 @@ func nrand() int64 {
 func MakeClerk(vshost string, me string) *Clerk {
 	ck := new(Clerk)
 	ck.vs = viewservice.MakeClerk(me, vshost)
-	// Your ck.* initializations here
+	// TODO: Your ck.* initializations here
 
 	return ck
 }
@@ -73,7 +73,7 @@ func call(srv string, rpcname string,
 //
 func (ck *Clerk) Get(key string) string {
 
-	// Your code here.
+	// TODO: Your code here.
 
 	return "???"
 }
@@ -83,7 +83,7 @@ func (ck *Clerk) Get(key string) string {
 //
 func (ck *Clerk) PutAppend(key string, value string, op string) {
 
-	// Your code here.
+	// TODO: Your code here.
 }
 
 //

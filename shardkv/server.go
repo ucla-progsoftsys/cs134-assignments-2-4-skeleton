@@ -26,7 +26,7 @@ func DPrintf(format string, a ...interface{}) (n int, err error) {
 
 
 type Op struct {
-	// Your definitions here.
+	// TODO: Your definitions here.
 }
 
 
@@ -41,18 +41,18 @@ type ShardKV struct {
 
 	gid int64 // my replica group ID
 
-	// Your definitions here.
+	// TODO: Your definitions here.
 }
 
 
 func (kv *ShardKV) Get(args *GetArgs, reply *GetReply) error {
-	// Your code here.
+	// TODO: Your code here.
 	return nil
 }
 
 // RPC handler for client Put and Append requests
 func (kv *ShardKV) PutAppend(args *PutAppendArgs, reply *PutAppendReply) error {
-	// Your code here.
+	// TODO: Your code here.
 	return nil
 }
 
@@ -61,6 +61,7 @@ func (kv *ShardKV) PutAppend(args *PutAppendArgs, reply *PutAppendReply) error {
 // if so, re-configure.
 //
 func (kv *ShardKV) tick() {
+	// TODO: Your code here.
 }
 
 // tell the server to shut itself down.
@@ -107,7 +108,7 @@ func StartServer(gid int64, shardmasters []string,
 	kv.gid = gid
 	kv.sm = shardmaster.MakeClerk(shardmasters)
 
-	// Your initialization code here.
+	// TODO: Your initialization code here.
 	// Don't call Join().
 
 	rpcs := rpc.NewServer()

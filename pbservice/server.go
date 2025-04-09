@@ -21,13 +21,13 @@ type PBServer struct {
 	unreliable int32 // for testing
 	me         string
 	vs         *viewservice.Clerk
-	// Your declarations here.
+	// TODO: Your declarations here.
 }
 
 
 func (pb *PBServer) Get(args *GetArgs, reply *GetReply) error {
 
-	// Your code here.
+	// TODO: Your code here.
 
 	return nil
 }
@@ -35,7 +35,7 @@ func (pb *PBServer) Get(args *GetArgs, reply *GetReply) error {
 
 func (pb *PBServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) error {
 
-	// Your code here.
+	// TODO: Your code here.
 
 
 	return nil
@@ -50,7 +50,7 @@ func (pb *PBServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) error 
 //
 func (pb *PBServer) tick() {
 
-	// Your code here.
+	// TODO: Your code here.
 }
 
 // tell the server to shut itself down.
@@ -83,7 +83,7 @@ func StartServer(vshost string, me string) *PBServer {
 	pb := new(PBServer)
 	pb.me = me
 	pb.vs = viewservice.MakeClerk(me, vshost)
-	// Your pb.* initializations here.
+	// TODO: Your pb.* initializations here.
 
 	rpcs := rpc.NewServer()
 	rpcs.Register(pb)
