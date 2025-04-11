@@ -12,7 +12,7 @@ type Clerk struct {
 	mu     sync.Mutex // one RPC at a time
 	sm     *shardmaster.Clerk
 	config shardmaster.Config
-	// You'll have to modify Clerk.
+	// TODO: You'll have to modify Clerk.
 }
 
 func nrand() int64 {
@@ -25,7 +25,7 @@ func nrand() int64 {
 func MakeClerk(shardmasters []string) *Clerk {
 	ck := new(Clerk)
 	ck.sm = shardmaster.MakeClerk(shardmasters)
-	// You'll have to modify MakeClerk.
+	// TODO: You'll have to modify MakeClerk.
 	return ck
 }
 
@@ -86,7 +86,7 @@ func (ck *Clerk) Get(key string) string {
 	ck.mu.Lock()
 	defer ck.mu.Unlock()
 
-	// You'll have to modify Get().
+	// TODO: You'll have to modify Get().
 
 	for {
 		shard := key2shard(key)
@@ -123,7 +123,7 @@ func (ck *Clerk) PutAppend(key string, value string, op string) {
 	ck.mu.Lock()
 	defer ck.mu.Unlock()
 
-	// You'll have to modify PutAppend().
+	// TODO: You'll have to modify PutAppend().
 
 	for {
 		shard := key2shard(key)

@@ -1,16 +1,19 @@
-package kvpaxos
+package pbservice
 
+import "viewservice"
 import "net/rpc"
+import "fmt"
+
 import "crypto/rand"
 import "math/big"
 
-import "fmt"
 
 type Clerk struct {
-	servers []string
-	// You will have to modify this struct.
+	vs *viewservice.Clerk
+	// TODO: Your declarations here
 }
 
+// this may come in handy.
 func nrand() int64 {
 	max := big.NewInt(int64(1) << 62)
 	bigx, _ := rand.Int(rand.Reader, max)
@@ -18,12 +21,14 @@ func nrand() int64 {
 	return x
 }
 
-func MakeClerk(servers []string) *Clerk {
+func MakeClerk(vshost string, me string) *Clerk {
 	ck := new(Clerk)
-	ck.servers = servers
-	// You'll have to add code here.
+	ck.vs = viewservice.MakeClerk(me, vshost)
+	// TODO: Your ck.* initializations here
+
 	return ck
 }
+
 
 //
 // call() sends an RPC to the rpcname handler on server srv
@@ -60,25 +65,39 @@ func call(srv string, rpcname string,
 }
 
 //
-// fetch the current value for a key.
-// returns "" if the key does not exist.
-// keeps trying forever in the face of all other errors.
+// fetch a key's value from the current primary;
+// if they key has never been set, return "".
+// Get() must keep trying until it either the
+// primary replies with the value or the primary
+// says the key doesn't exist (has never been Put().
 //
 func (ck *Clerk) Get(key string) string {
-	// You will have to modify this function.
-	return ""
+
+	// TODO: Your code here.
+
+	return "???"
 }
 
 //
-// shared by Put and Append.
+// send a Put or Append RPC
 //
 func (ck *Clerk) PutAppend(key string, value string, op string) {
-	// You will have to modify this function.
+
+	// TODO: Your code here.
 }
 
+//
+// tell the primary to update key's value.
+// must keep trying until it succeeds.
+//
 func (ck *Clerk) Put(key string, value string) {
 	ck.PutAppend(key, value, "Put")
 }
+
+//
+// tell the primary to append to key's value.
+// must keep trying until it succeeds.
+//
 func (ck *Clerk) Append(key string, value string) {
 	ck.PutAppend(key, value, "Append")
 }

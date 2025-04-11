@@ -1,4 +1,5 @@
 .DS_Store
-src/main/pbc
-src/main/pbd
-src/main/viewd
+main/pbc
+main/pbd
+main/viewd
+*.txt

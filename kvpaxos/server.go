@@ -24,7 +24,7 @@ func DPrintf(format string, a ...interface{}) (n int, err error) {
 
 
 type Op struct {
-	// Your definitions here.
+	// TODO: Your definitions here.
 	// Field names must start with capital letters,
 	// otherwise RPC will break.
 }
@@ -37,17 +37,17 @@ type KVPaxos struct {
 	unreliable int32 // for testing
 	px         *paxos.Paxos
 
-	// Your definitions here.
+	// TODO: Your definitions here.
 }
 
 
 func (kv *KVPaxos) Get(args *GetArgs, reply *GetReply) error {
-	// Your code here.
+	// TODO: Your code here.
 	return nil
 }
 
 func (kv *KVPaxos) PutAppend(args *PutAppendArgs, reply *PutAppendReply) error {
-	// Your code here.
+	// TODO: Your code here.
 
 	return nil
 }
@@ -93,7 +93,7 @@ func StartServer(servers []string, me int) *KVPaxos {
 	kv := new(KVPaxos)
 	kv.me = me
 
-	// Your initialization code here.
+	// TODO: Your initialization code here.
 
 	rpcs := rpc.NewServer()
 	rpcs.Register(kv)

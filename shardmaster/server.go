@@ -26,30 +26,30 @@ type ShardMaster struct {
 
 
 type Op struct {
-	// Your data here.
+	// TODO: Your data here.
 }
 
 
 func (sm *ShardMaster) Join(args *JoinArgs, reply *JoinReply) error {
-	// Your code here.
+	// TODO: Your code here.
 
 	return nil
 }
 
 func (sm *ShardMaster) Leave(args *LeaveArgs, reply *LeaveReply) error {
-	// Your code here.
+	// TODO: Your code here.
 
 	return nil
 }
 
 func (sm *ShardMaster) Move(args *MoveArgs, reply *MoveReply) error {
-	// Your code here.
+	// TODO: Your code here.
 
 	return nil
 }
 
 func (sm *ShardMaster) Query(args *QueryArgs, reply *QueryReply) error {
-	// Your code here.
+	// TODO: Your code here.
 
 	return nil
 }

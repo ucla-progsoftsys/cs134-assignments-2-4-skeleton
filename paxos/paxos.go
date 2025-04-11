@@ -54,7 +54,7 @@ type Paxos struct {
 	me         int // index into peers[]
 
 
-	// Your data here.
+	// TODO: Your data here.
 }
 
 //
@@ -102,7 +102,7 @@ func call(srv string, name string, args interface{}, reply interface{}) bool {
 // is reached.
 //
 func (px *Paxos) Start(seq int, v interface{}) {
-	// Your code here.
+	// TODO: Your code here.
 }
 
 //
@@ -112,7 +112,7 @@ func (px *Paxos) Start(seq int, v interface{}) {
 // see the comments for Min() for more explanation.
 //
 func (px *Paxos) Done(seq int) {
-	// Your code here.
+	// TODO: Your code here.
 }
 
 //
@@ -121,7 +121,7 @@ func (px *Paxos) Done(seq int) {
 // this peer.
 //
 func (px *Paxos) Max() int {
-	// Your code here.
+	// TODO: Your code here.
 	return 0
 }
 
@@ -154,7 +154,7 @@ func (px *Paxos) Max() int {
 // instances.
 //
 func (px *Paxos) Min() int {
-	// You code here.
+	// TODO: You code here.
 	return 0
 }
 
@@ -166,7 +166,7 @@ func (px *Paxos) Min() int {
 // it should not contact other Paxos peers.
 //
 func (px *Paxos) Status(seq int) (Fate, interface{}) {
-	// Your code here.
+	// TODO: Your code here.
 	return Pending, nil
 }
 
@@ -215,7 +215,7 @@ func Make(peers []string, me int, rpcs *rpc.Server) *Paxos {
 	px.me = me
 
 
-	// Your initialization code here.
+	// TODO: Your initialization code here.
 
 	if rpcs != nil {
 		// caller will create socket &c
