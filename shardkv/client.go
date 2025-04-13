@@ -1,6 +1,6 @@
 package shardkv
 
-import "shardmaster"
+import "cs134-25s-kv/shardmaster"
 import "net/rpc"
 import "time"
 import "sync"
