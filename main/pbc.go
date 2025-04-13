@@ -17,7 +17,7 @@ package main
 // and then restart them to exercise fault tolerance.
 //
 
-import "pbservice"
+import "cs134-25s-kv/pbservice"
 import "os"
 import "fmt"
 

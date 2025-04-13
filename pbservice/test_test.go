@@ -1,6 +1,6 @@
 package pbservice
 
-import "viewservice"
+import "cs134-25s-kv/viewservice"
 import "fmt"
 import "io"
 import "net"

@@ -5,14 +5,14 @@ import "fmt"
 import "net/rpc"
 import "log"
 import "time"
-import "paxos"
+import "cs134-25s-kv/paxos"
 import "sync"
 import "sync/atomic"
 import "os"
 import "syscall"
 import "encoding/gob"
 import "math/rand"
-import "shardmaster"
+import "cs134-25s-kv/shardmaster"
 
 
 const Debug = 0
